@@ -1,0 +1,214 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" modified="2024-12-21T07:47:49.352Z" etag="SMD33JKGYKBQ5VosA3Pe" version="24.2.5" type="device">
+  <diagram id="wFE0QG_FPsp0jaGvCLVb" name="Page-1">
+    <mxGraphModel dx="1363" dy="2107" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-47" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9FFF2;strokeColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="58" y="60" width="132" height="920" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="190" y="60" width="549" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-2" value="App&lt;div&gt;(IOS、Android、Harmony)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B51233;strokeColor=#6F0000;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="230" y="72.5" width="120" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-4" value="Web(HTML、HTML5、Vue)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B51233;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
+          <mxGeometry x="425" y="72.5" width="120" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="190" y="150" width="549" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-8" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;CDN&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eae8fd;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="200" y="162.5" width="110" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-9" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Nginx&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eae8fb;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="333" y="162.5" width="115" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-11" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;HTTP/HTTPS&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eae8f8;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="610" y="162.5" width="120" height="43.75" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-12" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;SpringCloudGateway&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eae8f9;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="470" y="162.5" width="120" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-24" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="288" width="530" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-25" value="Spring Cloud Bus&lt;div&gt;消息总线&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="210" y="298" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-26" value="&lt;div&gt;Cloud Data Flow&lt;/div&gt;&lt;div&gt;数据操作&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="347" y="298" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-27" value="&lt;div&gt;Cloud Task&lt;/div&gt;&lt;div&gt;任务调度&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="480" y="298" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-29" value="Authority Control&lt;div&gt;权限控制&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="610" y="298" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-30" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F1FF;strokeColor=#56517e;" parent="1" vertex="1">
+          <mxGeometry x="190" y="815" width="548" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-31" value="Relational Database, Large File Storage, Unstructured Data Storage, Memory Storage" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="233" y="821" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-32" value="MySQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="227" y="871" width="70" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-34" value="Redis&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22MySQL%22%20style%3D%22shape%3Dcylinder3%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BboundedLbl%3D1%3BbackgroundOutline%3D1%3Bsize%3D15%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22240%22%20y%3D%22640%22%20width%3D%2270%22%20height%3D%2278%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="363" y="871" width="70" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-35" value="OSS" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="505" y="872" width="70" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="fcwe4e0JtKJg0WrbXX_n-36" value="Cassandra" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="642" y="871" width="70" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-1" value="微信小程序" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B51233;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
+          <mxGeometry x="609" y="72.5" width="120" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="190" y="232" width="548" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-5" value="&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Unified Authentication&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eae8fd;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="199" y="236.75" width="110" height="19.5" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-10" value="&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;API Gateway&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eae8fd;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="333" y="236.75" width="110" height="19.5" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-11" value="&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;Routing Distribution&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eae8fd;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="470" y="236.75" width="110" height="19.5" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-12" value="&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Access Control Policy&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eae8fd;strokeColor=#36393d;" parent="1" vertex="1">
+          <mxGeometry x="612" y="236.75" width="110" height="19.5" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-13" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Spring%20Cloud%20Bus%26lt%3Bdiv%26gt%3B%E6%B6%88%E6%81%AF%E6%80%BB%E7%BA%BF%26lt%3B%2Fdiv%26gt%3B%22%20style%3D%22rounded%3D1%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23d5e8d4%3BstrokeColor%3D%2382b366%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22205%22%20y%3D%22516%22%20width%3D%22110%22%20height%3D%2250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;glass=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="190" y="409" width="548" height="398" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-14" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#DEF2FC;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="662" y="358" as="sourcePoint" />
+            <mxPoint x="662.2289719626169" y="407" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-16" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#DEF2FC;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="533.5" y="358" as="sourcePoint" />
+            <mxPoint x="533.7289719626169" y="407" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-17" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#DEF2FC;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="401.5" y="358" as="sourcePoint" />
+            <mxPoint x="401.7289719626169" y="407" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-18" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#DEF2FC;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="264.5" y="358" as="sourcePoint" />
+            <mxPoint x="264.7289719626169" y="407" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-21" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="231" y="430" width="466" height="133" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-22" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="232" y="624" width="466" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-23" value="&lt;b&gt;基础服务集群&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="383" y="430" width="140" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-24" value="&lt;b&gt;业务服务集群&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="395" y="624" width="140" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-25" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; font-size: medium; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;网关服务&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="246" y="463" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-27" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; font-size: medium; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;认证服务&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="363" y="463" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-28" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;分布式 ID 生成服务&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="480" y="463" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-29" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;OSS 对象存储服务&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="598" y="463" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-30" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;KV 短文本键值存储服务&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="246" y="513" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-42" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; font-size: medium; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;用户服务&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="247" y="662" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-43" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; font-size: medium; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;笔记服务&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="364" y="662" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-44" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; font-size: medium; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;用户关系服务&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="481" y="662" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-48" value="&lt;b&gt;表现层&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#D9FFF2;" parent="1" vertex="1">
+          <mxGeometry x="70" y="69" width="110" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-45" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; font-size: medium; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;计数服务&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="599" y="662" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-49" value="&lt;b&gt;网络层&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F5;strokeColor=#D9FFF2;" parent="1" vertex="1">
+          <mxGeometry x="66" y="150" width="116" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-50" value="&lt;b&gt;服务层&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D9FFF2;" parent="1" vertex="1">
+          <mxGeometry x="64" y="276" width="116" height="538" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-51" value="&lt;b&gt;数据层&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F1FF;strokeColor=#D9FFF2;" parent="1" vertex="1">
+          <mxGeometry x="64" y="826" width="116" height="139" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-52" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9FFF2;strokeColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="740" y="60" width="132" height="919" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-55" value="&lt;b&gt;治理&amp;amp;配置&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="760" y="72.5" width="92" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-59" value="Consul&lt;div style=&quot;font-size: 13px;&quot;&gt;服务治理&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00FF80;strokeColor=#D9FFF2;fontSize=13;spacing=4;spacingTop=4;" parent="1" vertex="1">
+          <mxGeometry x="754" y="181" width="110" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-60" value="Nacos&lt;div style=&quot;font-size: 13px;&quot;&gt;服务注册与发现&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00FF80;strokeColor=#D9FFF2;fontSize=13;spacing=4;spacingTop=4;" parent="1" vertex="1">
+          <mxGeometry x="754" y="310" width="110" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-61" value="Config&lt;div style=&quot;font-size: 13px;&quot;&gt;配置管理&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00FF80;strokeColor=#D9FFF2;fontSize=13;spacing=4;spacingTop=4;" parent="1" vertex="1">
+          <mxGeometry x="754" y="439" width="110" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-62" value="gateway&lt;div style=&quot;font-size: 13px;&quot;&gt;服务统一出口&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00FF80;strokeColor=#D9FFF2;fontSize=13;spacing=4;spacingTop=4;" parent="1" vertex="1">
+          <mxGeometry x="754" y="568" width="110" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="PL-BYNhaHDS3Lqfe0BcG-63" value="Sentinel&lt;div style=&quot;font-size: 13px;&quot;&gt;服务熔断&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00FF80;strokeColor=#D9FFF2;fontSize=13;spacing=4;spacingTop=4;" parent="1" vertex="1">
+          <mxGeometry x="754" y="697" width="110" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="tl76Pngtdqj8dseaIQaN-1" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; font-size: medium; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;评论服务&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="247" y="718" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="tl76Pngtdqj8dseaIQaN-2" value="&lt;span style=&quot;border: 0px solid rgb(229, 231, 235); box-sizing: border-box; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; font-weight: bolder; color: rgb(76, 78, 77); font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;, BlinkMacSystemFont, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;PingFang TC&amp;quot;, &amp;quot;PingFang HK&amp;quot;, &amp;quot;Microsoft Yahei&amp;quot;, &amp;quot;Microsoft JhengHei&amp;quot;; font-size: medium; letter-spacing: 0.3px; text-align: left; background-color: rgb(255, 255, 255);&quot;&gt;数据对齐服务&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="366" y="718" width="87" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="tl76Pngtdqj8dseaIQaN-3" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#DEF2FC;startSize=9;sourcePerimeterSpacing=1;entryX=0.264;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="PL-BYNhaHDS3Lqfe0BcG-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="354" y="562" as="sourcePoint" />
+            <mxPoint x="354.88800000000003" y="625.13" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tl76Pngtdqj8dseaIQaN-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#DEF2FC;startSize=9;sourcePerimeterSpacing=1;entryX=0.264;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="594" y="564" as="sourcePoint" />
+            <mxPoint x="595" y="626" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tl76Pngtdqj8dseaIQaN-5" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Open Feign&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="391" y="578" width="131" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tl76Pngtdqj8dseaIQaN-6" value="负载均衡" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00FF80;strokeColor=#D9FFF2;fontSize=13;spacing=4;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="754" y="826" width="110" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="tl76Pngtdqj8dseaIQaN-7" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Momento系统逻辑架构&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="61" y="-3" width="812" height="58" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
