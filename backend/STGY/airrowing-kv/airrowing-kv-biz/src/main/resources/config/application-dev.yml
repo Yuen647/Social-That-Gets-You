@@ -1,5 +1,5 @@
 spring:
   cassandra:
     keyspace-name: airrowing
-    contact-points: 127.0.0.1
+    contact-points: 117.72.111.42
     port: 9042
