@@ -14,9 +14,9 @@
 2024-11-20 14:36:18.470 [main] INFO  com.alibaba.nacos.common.remote.client - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$575/0x0000015c81366d28
 2024-11-20 14:36:18.471 [main] INFO  com.alibaba.nacos.common.remote.client - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
 2024-11-20 14:36:18.472 [main] INFO  com.alibaba.nacos.common.remote.client - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
-2024-11-20 14:36:18.488 [main] INFO  com.alibaba.nacos.common.remote.client - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
-2024-11-20 14:36:18.544 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:127.0.0.1 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
-2024-11-20 14:36:20.062 [main] INFO  com.alibaba.nacos.common.remote.client - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1732084579740_172.17.0.1_47060
+2024-11-20 14:36:18.488 [main] INFO  com.alibaba.nacos.common.remote.client - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] Try to connect to server on start up, server: {serverIp = '117.72.111.42', server main port = 8848}
+2024-11-20 14:36:18.544 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:117.72.111.42 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2024-11-20 14:36:20.062 [main] INFO  com.alibaba.nacos.common.remote.client - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] Success to connect to server [117.72.111.42:8848] on start up, connectionId = 1732084579740_172.17.0.1_47060
 2024-11-20 14:36:20.063 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] Notify connected event to listeners.
 2024-11-20 14:36:20.063 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] Connected,notify listen context...
 2024-11-20 14:36:20.063 [main] INFO  com.alibaba.nacos.common.remote.client - [48fd470a-fc1d-4d08-802d-04151f8d6be0_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
@@ -51,9 +51,9 @@
 2024-11-20 14:36:28.992 [main] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
 2024-11-20 14:36:28.992 [main] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
 2024-11-20 14:36:28.993 [main] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-2024-11-20 14:36:28.994 [main] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
-2024-11-20 14:36:28.995 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:127.0.0.1 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
-2024-11-20 14:36:29.138 [main] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1732084589013_172.17.0.1_59474
+2024-11-20 14:36:28.994 [main] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] Try to connect to server on start up, server: {serverIp = '117.72.111.42', server main port = 8848}
+2024-11-20 14:36:28.995 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:117.72.111.42 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2024-11-20 14:36:29.138 [main] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] Success to connect to server [117.72.111.42:8848] on start up, connectionId = 1732084589013_172.17.0.1_59474
 2024-11-20 14:36:29.138 [main] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
 2024-11-20 14:36:29.138 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] Notify connected event to listeners.
 2024-11-20 14:36:29.139 [main] INFO  com.alibaba.nacos.common.remote.client - [c23bf890-313f-4df8-9079-4f3a94090e2c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$595/0x0000015c814ee1c8
@@ -63,14 +63,14 @@
 2024-11-20 14:36:30.509 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
 2024-11-20 14:36:30.528 [main] INFO  c.tongji.airrowing.auth.AirrowingAuthApplication - Started AirrowingAuthApplication in 15.868 seconds (process running for 18.608)
 2024-11-20 14:36:30.533 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - nacos.cache.data.init.snapshot = true 
-2024-11-20 14:36:30.535 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-airrowing-127.0.0.1_8848] [subscribe] airrowing-auth-dev.yaml+DEFAULT_GROUP+airrowing
-2024-11-20 14:36:30.546 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-airrowing-127.0.0.1_8848] [add-listener] ok, tenant=airrowing, dataId=airrowing-auth-dev.yaml, group=DEFAULT_GROUP, cnt=1
+2024-11-20 14:36:30.535 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-airrowing-117.72.111.42_8848] [subscribe] airrowing-auth-dev.yaml+DEFAULT_GROUP+airrowing
+2024-11-20 14:36:30.546 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-airrowing-117.72.111.42_8848] [add-listener] ok, tenant=airrowing, dataId=airrowing-auth-dev.yaml, group=DEFAULT_GROUP, cnt=1
 2024-11-20 14:36:30.547 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=airrowing-auth-dev.yaml, group=DEFAULT_GROUP
-2024-11-20 14:36:30.547 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-airrowing-127.0.0.1_8848] [subscribe] airrowing-auth.yaml+DEFAULT_GROUP+airrowing
-2024-11-20 14:36:30.547 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-airrowing-127.0.0.1_8848] [add-listener] ok, tenant=airrowing, dataId=airrowing-auth.yaml, group=DEFAULT_GROUP, cnt=1
+2024-11-20 14:36:30.547 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-airrowing-117.72.111.42_8848] [subscribe] airrowing-auth.yaml+DEFAULT_GROUP+airrowing
+2024-11-20 14:36:30.547 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-airrowing-117.72.111.42_8848] [add-listener] ok, tenant=airrowing, dataId=airrowing-auth.yaml, group=DEFAULT_GROUP, cnt=1
 2024-11-20 14:36:30.547 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=airrowing-auth.yaml, group=DEFAULT_GROUP
-2024-11-20 14:36:30.549 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-airrowing-127.0.0.1_8848] [subscribe] airrowing-auth+DEFAULT_GROUP+airrowing
-2024-11-20 14:36:30.549 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-airrowing-127.0.0.1_8848] [add-listener] ok, tenant=airrowing, dataId=airrowing-auth, group=DEFAULT_GROUP, cnt=1
+2024-11-20 14:36:30.549 [main] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [fixed-airrowing-117.72.111.42_8848] [subscribe] airrowing-auth+DEFAULT_GROUP+airrowing
+2024-11-20 14:36:30.549 [main] INFO  com.alibaba.nacos.client.config.impl.CacheData - [fixed-airrowing-117.72.111.42_8848] [add-listener] ok, tenant=airrowing, dataId=airrowing-auth, group=DEFAULT_GROUP, cnt=1
 2024-11-20 14:36:30.549 [main] INFO  c.a.cloud.nacos.refresh.NacosContextRefresher - [Nacos Config] Listening config: dataId=airrowing-auth, group=DEFAULT_GROUP
 2024-11-20 14:41:39.031 [Thread-2] WARN  c.alibaba.nacos.common.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
 2024-11-20 14:41:39.031 [Thread-9] WARN  com.alibaba.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
@@ -97,7 +97,7 @@
 2024-11-20 14:41:39.058 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown rpc client, set status to shutdown
 2024-11-20 14:41:39.058 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@5310dfeb[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
 2024-11-20 14:41:39.058 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.common.remote.client - Close current connection 1732084589013_172.17.0.1_59474
-2024-11-20 14:41:39.062 [nacos-grpc-client-executor-127.0.0.1-70] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - [1732084589013_172.17.0.1_59474]Ignore complete event,isRunning:false,isAbandon=false
+2024-11-20 14:41:39.062 [nacos-grpc-client-executor-117.72.111.42-70] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - [1732084589013_172.17.0.1_59474]Ignore complete event,isRunning:false,isAbandon=false
 2024-11-20 14:41:39.063 [SpringApplicationShutdownHook] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@60df1bb8[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 71]
 2024-11-20 14:41:39.064 [SpringApplicationShutdownHook] INFO  com.alibaba.nacos.client.naming - Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@292740e0[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 99]
 2024-11-20 14:41:39.064 [SpringApplicationShutdownHook] INFO  c.a.n.client.auth.ram.identify.CredentialWatcher - [null] CredentialWatcher is stopped

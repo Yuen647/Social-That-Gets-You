@@ -14,9 +14,9 @@
 2024-11-20 14:36:50.912 [main] INFO  com.alibaba.nacos.common.remote.client - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$585/0x000001423038e840
 2024-11-20 14:36:50.912 [main] INFO  com.alibaba.nacos.common.remote.client - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
 2024-11-20 14:36:50.913 [main] INFO  com.alibaba.nacos.common.remote.client - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
-2024-11-20 14:36:50.920 [main] INFO  com.alibaba.nacos.common.remote.client - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] Try to connect to server on start up, server: {serverIp = '127.0.0.1', server main port = 8848}
-2024-11-20 14:36:50.947 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:127.0.0.1 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
-2024-11-20 14:36:52.249 [main] INFO  com.alibaba.nacos.common.remote.client - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] Success to connect to server [127.0.0.1:8848] on start up, connectionId = 1732084611974_172.17.0.1_48356
+2024-11-20 14:36:50.920 [main] INFO  com.alibaba.nacos.common.remote.client - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] Try to connect to server on start up, server: {serverIp = '117.72.111.42', server main port = 8848}
+2024-11-20 14:36:50.947 [main] INFO  c.a.nacos.common.remote.client.grpc.GrpcClient - grpc client connection server:117.72.111.42 ip,serverPort:9848,grpcTslConfig:{"sslProvider":"OPENSSL","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2024-11-20 14:36:52.249 [main] INFO  com.alibaba.nacos.common.remote.client - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] Success to connect to server [117.72.111.42:8848] on start up, connectionId = 1732084611974_172.17.0.1_48356
 2024-11-20 14:36:52.250 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.common.remote.client - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] Notify connected event to listeners.
 2024-11-20 14:36:52.251 [com.alibaba.nacos.client.remote.worker] INFO  com.alibaba.nacos.client.config.impl.ClientWorker - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] Connected,notify listen context...
 2024-11-20 14:36:52.251 [main] INFO  com.alibaba.nacos.common.remote.client - [af22b022-17fa-49a4-9b5f-45d8ea82c175_config-0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
@@ -47,7 +47,7 @@
 2024-11-20 14:36:56.163 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
 2024-11-20 14:36:56.163 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3695 ms
 2024-11-20 14:36:56.301 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
-2024-11-20 14:37:00.665 [main] ERROR com.alibaba.druid.pool.DruidDataSource - init datasource error, url: jdbc:mysql://127.0.0.1:3306/airrowing?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
+2024-11-20 14:37:00.665 [main] ERROR com.alibaba.druid.pool.DruidDataSource - init datasource error, url: jdbc:mysql://117.72.111.42:3306/airrowing?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
 java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)

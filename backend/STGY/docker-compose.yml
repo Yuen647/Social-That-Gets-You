@@ -8,10 +8,10 @@ services:
     environment:
       - SERVER_PORT=8080
       - SPRING_PROFILES_ACTIVE=prod
-      - SPRING_DATA_REDIS_HOST=127.0.0.1
+      - SPRING_DATA_REDIS_HOST=117.72.111.42
       - SPRING_DATA_REDIS_PORT=6379
       - SPRING_DATA_REDIS_PASSWORD=tj123456
-      - SPRING_CLOUD_NACOS_CONFIG_SERVER_ADDR=http://127.0.0.1:8848
+      - SPRING_CLOUD_NACOS_CONFIG_SERVER_ADDR=http://117.72.111.42:8848
     deploy:
       resources:
         limits:
