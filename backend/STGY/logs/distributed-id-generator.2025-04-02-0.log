@@ -1,0 +1,243 @@
+2025-04-02 17:14:00.151 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-04-02 17:14:00.179 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-04-02 17:14:00.284 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-04-02 17:14:00.289 [main] WARN  com.alibaba.nacos.client.logging.NacosLogging - Load Logback Configuration of Nacos fail, message: Could not initialize Logback Nacos logging from classpath:nacos-logback.xml
+2025-04-02 17:14:00.289 [main] INFO  c.t.a.d.i.g.b.AirrowingDistributedIdGeneratorBizApplication - The following 1 profile is active: "dev"
+2025-04-02 17:14:00.456 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=5535c2c7-7fcd-3a0e-80d6-321a34808f26
+2025-04-02 17:14:00.529 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7085 (http)
+2025-04-02 17:14:00.537 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-02 17:14:00.537 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-04-02 17:14:00.565 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-02 17:14:00.566 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 273 ms
+2025-04-02 17:14:00.621 [main] INFO  c.t.a.d.i.g.biz.core.segment.SegmentIDGenImpl - Init ...
+2025-04-02 17:14:00.621 [main] INFO  c.t.a.d.i.g.biz.core.segment.SegmentIDGenImpl - update cache from db
+2025-04-02 17:14:01.281 [main] INFO  c.t.a.d.i.g.biz.core.segment.SegmentIDGenImpl - Add tag leaf-segment-airrowing-id from db to IdCache, SegmentBuffer SegmentBuffer{key='leaf-segment-airrowing-id', segments=[Segment(value:0,max:0,step:0), Segment(value:0,max:0,step:0)], currentPos=0, nextReady=false, initOk=false, threadRunning=false, step=0, minStep=0, updateTimestamp=0}
+2025-04-02 17:14:01.281 [main] INFO  c.t.a.d.i.g.biz.core.segment.SegmentIDGenImpl - Add tag leaf-segment-test from db to IdCache, SegmentBuffer SegmentBuffer{key='leaf-segment-test', segments=[Segment(value:0,max:0,step:0), Segment(value:0,max:0,step:0)], currentPos=0, nextReady=false, initOk=false, threadRunning=false, step=0, minStep=0, updateTimestamp=0}
+2025-04-02 17:14:01.281 [main] INFO  c.t.a.d.i.g.biz.core.segment.SegmentIDGenImpl - Add tag leaf-segment-user-id from db to IdCache, SegmentBuffer SegmentBuffer{key='leaf-segment-user-id', segments=[Segment(value:0,max:0,step:0), Segment(value:0,max:0,step:0)], currentPos=0, nextReady=false, initOk=false, threadRunning=false, step=0, minStep=0, updateTimestamp=0}
+2025-04-02 17:14:01.281 [main] INFO  org.perf4j.TimingLogger - start[1743585240621] time[660] tag[updateCacheFromDb]
+2025-04-02 17:14:01.282 [main] INFO  c.t.a.d.id.generator.biz.service.SegmentService - Segment Service Init Successfully
+2025-04-02 17:14:01.284 [main] INFO  c.t.a.d.i.g.biz.core.snowflake.SnowflakeIDGenImpl - twepoch:1288834974657 ,ip:100.79.42.125 ,zkAddress:117.72.111.42:2181 port:2223
+2025-04-02 17:14:01.312 [main] WARN  org.apache.curator.CuratorZookeeperClient - session timeout [6000] is less than connection timeout [10000]
+2025-04-02 17:14:01.316 [main] INFO  o.a.curator.framework.imps.CuratorFrameworkImpl - Starting
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.6.0--b4c89dc7f6083829e18fae6e446907ae0b1f22d7, built on 02/25/2020 14:38 GMT
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:host.name=localhost
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.version=17.0.14
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/Users/yuenlil/mySpace/university/Social-That-Gets-You/backend/STGY/airrowing-distributed-id-generator/airrowing-distributed-id-generator-biz/target/classes:/Users/yuenlil/mySpace/university/Social-That-Gets-You/backend/STGY/airrowing-framework/airrowing-common/target/classes:/Users/yuenlil/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/Users/yuenlil/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.16.1/jackson-databind-2.16.1.jar:/Users/yuenlil/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/yuenlil/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.16.1/jackson-core-2.16.1.jar:/Users/yuenlil/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.14.1/jackson-datatype-jsr310-2.14.1.jar:/Users/yuenlil/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/yuenlil/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.0.Final/hibernate-validator-8.0.0.Final.jar:/Users/yuenlil/.m2/repository/org/jboss/logging/jboss-logging/3.5.0.Final/jboss-logging-3.5.0.Final.jar:/Users/yuenlil/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/yuenlil/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/Users/yuenlil/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/yuenlil/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/yuenlil/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/yuenlil/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/Users/yuenlil/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/Users/yuenlil/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/yuenlil/.m2/repository/cn/hutool/hutool-all/5.8.26/hutool-all-5.8.26.jar:/Users/yuenlil/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/yuenlil/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.0.2/spring-boot-starter-web-3.0.2.jar:/Users/yuenlil/.m2/repository/org/springframework/boot/spring-boot-starter/3.0.2/spring-boot-starter-3.0.2.jar:/Users/yuenlil/.m2/repository/org/springframework/boot/spring-boot/3.0.2/spring-boot-3.0.2.jar:/Users/yuenlil/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.2/spring-boot-autoconfigure-3.0.2.jar:/Users/yuenlil/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.0.2/spring-boot-starter-logging-3.0.2.jar:/Users/yuenlil/.m2/repository/ch/qos/logback/logback-classic/1.4.5/logback-classic-1.4.5.jar:/Users/yuenlil/.m2/repository/ch/qos/logback/logback-core/1.4.5/logback-core-1.4.5.jar:/Users/yuenlil/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.19.0/log4j-to-slf4j-2.19.0.jar:/Users/yuenlil/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:/Users/yuenlil/.m2/repository/org/slf4j/jul-to-slf4j/2.0.6/jul-to-slf4j-2.0.6.jar:/Users/yuenlil/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/yuenlil/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/yuenlil/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.0.2/spring-boot-starter-json-3.0.2.jar:/Users/yuenlil/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.14.1/jackson-datatype-jdk8-2.14.1.jar:/Users/yuenlil/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.14.1/jackson-module-parameter-names-2.14.1.jar:/Users/yuenlil/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.0.2/spring-boot-starter-tomcat-3.0.2.jar:/Users/yuenlil/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.5/tomcat-embed-core-10.1.5.jar:/Users/yuenlil/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.5/tomcat-embed-el-10.1.5.jar:/Users/yuenlil/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.5/tomcat-embed-websocket-10.1.5.jar:/Users/yuenlil/.m2/repository/org/springframework/spring-web/6.0.4/spring-web-6.0.4.jar:/Users/yuenlil/.m2/repository/org/springframework/spring-beans/6.0.4/spring-beans-6.0.4.jar:/Users/yuenlil/.m2/repository/io/micrometer/micrometer-observation/1.10.3/micrometer-observation-1.10.3.jar:/Users/yuenlil/.m2/repository/io/micrometer/micrometer-commons/1.10.3/micrometer-commons-1.10.3.jar:/Users/yuenlil/.m2/repository/org/springframework/spring-webmvc/6.0.4/spring-webmvc-6.0.4.jar:/Users/yuenlil/.m2/repository/org/springframework/spring-aop/6.0.4/spring-aop-6.0.4.jar:/Users/yuenlil/.m2/repository/org/springframework/spring-context/6.0.4/spring-context-6.0.4.jar:/Users/yuenlil/.m2/repository/org/springframework/spring-expression/6.0.4/spring-expression-6.0.4.jar:/Users/yuenlil/.m2/repository/org/springframework/spring-core/6.0.4/spring-core-6.0.4.jar:/Users/yuenlil/.m2/repository/org/springframework/spring-jcl/6.0.4/spring-jcl-6.0.4.jar:/Users/yuenlil/.m2/repository/org/springframework/cloud/spring-cloud-starter-bootstrap/4.0.0/spring-cloud-starter-bootstrap-4.0.0.jar:/Users/yuenlil/.m2/repository/org/springframework/cloud/spring-cloud-starter/4.0.0/spring-cloud-starter-4.0.0.jar:/Users/yuenlil/.m2/repository/org/springframework/security/spring-security-rsa/1.0.11.RELEASE/spring-security-rsa-1.0.11.RELEASE.jar:/Users/yuenlil/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.69/bcpkix-jdk15on-1.69.jar:/Users/yuenlil/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.69/bcprov-jdk15on-1.69.jar:/Users/yuenlil/.m2/repository/org/bouncycastle/bcutil-jdk15on/1.69/bcutil-jdk15on-1.69.jar:/Users/yuenlil/.m2/repository/com/alibaba/cloud/spring-cloud-starter-alibaba-nacos-discovery/2022.0.0.0/spring-cloud-starter-alibaba-nacos-discovery-2022.0.0.0.jar:/Users/yuenlil/.m2/repository/com/alibaba/cloud/spring-cloud-alibaba-commons/2022.0.0.0/spring-cloud-alibaba-commons-2022.0.0.0.jar:/Users/yuenlil/.m2/repository/com/alibaba/nacos/nacos-client/2.2.1/nacos-client-2.2.1.jar:/Users/yuenlil/.m2/repository/com/alibaba/nacos/nacos-auth-plugin/2.2.1/nacos-auth-plugin-2.2.1.jar:/Users/yuenlil/.m2/repository/com/alibaba/nacos/nacos-encryption-plugin/2.2.1/nacos-encryption-plugin-2.2.1.jar:/Users/yuenlil/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/yuenlil/.m2/repository/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.jar:/Users/yuenlil/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/Users/yuenlil/.m2/repository/org/apache/httpcomponents/httpcore-nio/4.4.16/httpcore-nio-4.4.16.jar:/Users/yuenlil/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/Users/yuenlil/.m2/repository/io/prometheus/simpleclient/0.16.0/simpleclient-0.16.0.jar:/Users/yuenlil/.m2/repository/io/prometheus/simpleclient_tracer_otel/0.16.0/simpleclient_tracer_otel-0.16.0.jar:/Users/yuenlil/.m2/repository/io/prometheus/simpleclient_tracer_common/0.16.0/simpleclient_tracer_common-0.16.0.jar:/Users/yuenlil/.m2/repository/io/prometheus/simpleclient_tracer_otel_agent/0.16.0/simpleclient_tracer_otel_agent-0.16.0.jar:/Users/yuenlil/.m2/repository/com/alibaba/spring/spring-context-support/1.0.11/spring-context-support-1.0.11.jar:/Users/yuenlil/.m2/repository/org/springframework/cloud/spring-cloud-commons/4.0.0/spring-cloud-commons-4.0.0.jar:/Users/yuenlil/.m2/repository/org/springframework/security/spring-security-crypto/6.0.1/spring-security-crypto-6.0.1.jar:/Users/yuenlil/.m2/repository/org/springframework/cloud/spring-cloud-context/4.0.0/spring-cloud-context-4.0.0.jar:/Users/yuenlil/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/Users/yuenlil/.m2/repository/org/perf4j/perf4j/0.9.16/perf4j-0.9.16.jar:/Users/yuenlil/.m2/repository/mysql/mysql-connector-java/8.0.29/mysql-connector-java-8.0.29.jar:/Users/yuenlil/.m2/repository/com/google/protobuf/protobuf-java/3.19.4/protobuf-java-3.19.4.jar:/Users/yuenlil/.m2/repository/com/alibaba/druid/1.0.18/druid-1.0.18.jar:/Users/yuenlil/.m2/repository/org/mybatis/mybatis/3.3.0/mybatis-3.3.0.jar:/Users/yuenlil/.m2/repository/org/apache/curator/curator-recipes/2.6.0/curator-recipes-2.6.0.jar:/Users/yuenlil/.m2/repository/org/apache/curator/curator-framework/5.1.0/curator-framework-5.1.0.jar:/Users/yuenlil/.m2/repository/org/apache/curator/curator-client/5.1.0/curator-client-5.1.0.jar:/Users/yuenlil/.m2/repository/org/apache/zookeeper/zookeeper/3.6.0/zookeeper-3.6.0.jar:/Users/yuenlil/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/yuenlil/.m2/repository/org/apache/zookeeper/zookeeper-jute/3.6.0/zookeeper-jute-3.6.0.jar:/Users/yuenlil/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/Users/yuenlil/.m2/repository/io/netty/netty-handler/4.1.87.Final/netty-handler-4.1.87.Final.jar:/Users/yuenlil/.m2/repository/io/netty/netty-common/4.1.87.Final/netty-common-4.1.87.Final.jar:/Users/yuenlil/.m2/repository/io/netty/netty-resolver/4.1.87.Final/netty-resolver-4.1.87.Final.jar:/Users/yuenlil/.m2/repository/io/netty/netty-buffer/4.1.87.Final/netty-buffer-4.1.87.Final.jar:/Users/yuenlil/.m2/repository/io/netty/netty-transport/4.1.87.Final/netty-transport-4.1.87.Final.jar:/Users/yuenlil/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.87.Final/netty-transport-native-unix-common-4.1.87.Final.jar:/Users/yuenlil/.m2/repository/io/netty/netty-codec/4.1.87.Final/netty-codec-4.1.87.Final.jar:/Users/yuenlil/.m2/repository/io/netty/netty-transport-native-epoll/4.1.87.Final/netty-transport-native-epoll-4.1.87.Final.jar:/Users/yuenlil/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.87.Final/netty-transport-classes-epoll-4.1.87.Final.jar:/Users/yuenlil/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar:/Users/yuenlil/.m2/repository/org/slf4j/slf4j-reload4j/2.0.6/slf4j-reload4j-2.0.6.jar:/Users/yuenlil/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/Users/yuenlil/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/var/folders/qg/yr5g3qd95vgcr4s42snk9q4c0000gn/T/
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.name=Mac OS X
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.arch=aarch64
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.version=15.3
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.name=yuenlil
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.home=/Users/yuenlil
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/Users/yuenlil/mySpace/university/Social-That-Gets-You/backend/STGY
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.free=62MB
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.max=4096MB
+2025-04-02 17:14:01.320 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.total=90MB
+2025-04-02 17:14:01.321 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=117.72.111.42:2181 sessionTimeout=6000 watcher=org.apache.curator.ConnectionState@2a87ba34
+2025-04-02 17:14:01.323 [main] INFO  org.apache.zookeeper.common.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2025-04-02 17:14:01.327 [main] INFO  org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
+2025-04-02 17:14:01.329 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
+2025-04-02 17:14:01.333 [main] INFO  o.a.curator.framework.imps.CuratorFrameworkImpl - Default schema
+2025-04-02 17:14:11.377 [Curator-Framework-0] INFO  o.a.curator.framework.state.ConnectionStateManager - State change: SUSPENDED
+2025-04-02 17:14:11.377 [Curator-Framework-0] ERROR o.a.curator.framework.imps.CuratorFrameworkImpl - Background operation retry gave up
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:102)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkBackgroundRetry(CuratorFrameworkImpl.java:851)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.performBackgroundOperation(CuratorFrameworkImpl.java:999)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.backgroundOperationsLoop(CuratorFrameworkImpl.java:952)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.access$300(CuratorFrameworkImpl.java:66)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl$4.call(CuratorFrameworkImpl.java:342)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-04-02 17:14:11.378 [Curator-Framework-0] ERROR o.a.curator.framework.imps.CuratorFrameworkImpl - Background retry gave up
+org.apache.curator.CuratorConnectionLossException: KeeperErrorCode = ConnectionLoss
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.performBackgroundOperation(CuratorFrameworkImpl.java:981)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.backgroundOperationsLoop(CuratorFrameworkImpl.java:952)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.access$300(CuratorFrameworkImpl.java:66)
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl$4.call(CuratorFrameworkImpl.java:342)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-04-02 17:14:14.367 [main-SendThread(117.72.111.42:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server 117.72.111.42/117.72.111.42:2181.
+2025-04-02 17:14:14.367 [main-SendThread(117.72.111.42:2181)] INFO  org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-04-02 17:14:14.370 [main-SendThread(117.72.111.42:2181)] WARN  org.apache.zookeeper.ClientCnxn - Client session timed out, have not heard from server in 13041ms for session id 0x0
+2025-04-02 17:14:14.371 [main-SendThread(117.72.111.42:2181)] WARN  org.apache.zookeeper.ClientCnxn - Session 0x0 for sever 117.72.111.42/117.72.111.42:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+org.apache.zookeeper.ClientCnxn$SessionTimeoutException: Client session timed out, have not heard from server in 13041ms for session id 0x0
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1230)
+2025-04-02 17:14:14.481 [main] ERROR c.t.a.d.i.g.b.c.snowflake.SnowflakeZookeeperHolder - Start node ERROR {}
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /snowflake/com.sankuai.leaf.opensource.airrowing/forever
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:102)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:54)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:2246)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:268)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$3.call(ExistsBuilderImpl.java:257)
+	at org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:93)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForegroundStandard(ExistsBuilderImpl.java:254)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.pathInForeground(ExistsBuilderImpl.java:247)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:206)
+	at org.apache.curator.framework.imps.ExistsBuilderImpl.forPath(ExistsBuilderImpl.java:35)
+	at com.tongji.airrowing.distributed.id.generator.biz.core.snowflake.SnowflakeZookeeperHolder.init(SnowflakeZookeeperHolder.java:52)
+	at com.tongji.airrowing.distributed.id.generator.biz.core.snowflake.SnowflakeIDGenImpl.<init>(SnowflakeIDGenImpl.java:50)
+	at com.tongji.airrowing.distributed.id.generator.biz.core.snowflake.SnowflakeIDGenImpl.<init>(SnowflakeIDGenImpl.java:36)
+	at com.tongji.airrowing.distributed.id.generator.biz.service.SnowflakeService.<init>(SnowflakeService.java:28)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:490)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:467)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:618)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:242)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:300)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.tongji.airrowing.distributed.id.generator.biz.AirrowingDistributedIdGeneratorBizApplication.main(AirrowingDistributedIdGeneratorBizApplication.java:10)
+2025-04-02 17:14:14.482 [main] ERROR c.t.a.d.i.g.b.c.snowflake.SnowflakeZookeeperHolder - Read file error 
+java.io.FileNotFoundException: /var/folders/qg/yr5g3qd95vgcr4s42snk9q4c0000gn/T/com.sankuai.leaf.opensource.airrowing/leafconf/2223/workerID.properties (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at com.tongji.airrowing.distributed.id.generator.biz.core.snowflake.SnowflakeZookeeperHolder.init(SnowflakeZookeeperHolder.java:98)
+	at com.tongji.airrowing.distributed.id.generator.biz.core.snowflake.SnowflakeIDGenImpl.<init>(SnowflakeIDGenImpl.java:50)
+	at com.tongji.airrowing.distributed.id.generator.biz.core.snowflake.SnowflakeIDGenImpl.<init>(SnowflakeIDGenImpl.java:36)
+	at com.tongji.airrowing.distributed.id.generator.biz.service.SnowflakeService.<init>(SnowflakeService.java:28)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:490)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:467)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:618)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:242)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:300)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.tongji.airrowing.distributed.id.generator.biz.AirrowingDistributedIdGeneratorBizApplication.main(AirrowingDistributedIdGeneratorBizApplication.java:10)
+2025-04-02 17:14:14.482 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'leafController': Injection of resource dependencies failed
+2025-04-02 17:14:14.483 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-02 17:14:14.494 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-02 17:14:14.500 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'leafController': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:303)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1397)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.tongji.airrowing.distributed.id.generator.biz.AirrowingDistributedIdGeneratorBizApplication.main(AirrowingDistributedIdGeneratorBizApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'SnowflakeService' defined in file [/Users/yuenlil/mySpace/university/Social-That-Gets-You/backend/STGY/airrowing-distributed-id-generator/airrowing-distributed-id-generator-biz/target/classes/com/tongji/airrowing/distributed/id/generator/biz/service/SnowflakeService.class]: Failed to instantiate [com.tongji.airrowing.distributed.id.generator.biz.service.SnowflakeService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:490)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:467)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:618)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:242)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:300)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tongji.airrowing.distributed.id.generator.biz.service.SnowflakeService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300)
+	... 33 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Snowflake Id Gen is not init ok
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:143)
+	at com.tongji.airrowing.distributed.id.generator.biz.core.snowflake.SnowflakeIDGenImpl.<init>(SnowflakeIDGenImpl.java:55)
+	at com.tongji.airrowing.distributed.id.generator.biz.core.snowflake.SnowflakeIDGenImpl.<init>(SnowflakeIDGenImpl.java:36)
+	at com.tongji.airrowing.distributed.id.generator.biz.service.SnowflakeService.<init>(SnowflakeService.java:28)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197)
+	... 35 common frames omitted
