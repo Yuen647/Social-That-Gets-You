@@ -24,10 +24,10 @@
           </div>
         </div>
 
-        <!-- 训练趋势分析 -->
+        <!-- 社交趋势分析 -->
         <div class="analysis-section">
           <div class="section-header">
-            <h2>训练趋势分析</h2>
+            <h2>社交趋势分析</h2>
             <div class="filter-group">
               <div class="date-filters">
                 <el-date-picker
@@ -48,19 +48,19 @@
                 />
               </div>
               <el-select 
-                v-model="trendTrainingType" 
-                placeholder="训练类型"
+                v-model="trendSocialType" 
+                placeholder="社交类型"
                 class="filter-item"
                 @change="handleTrendFilterChange"
               >
-                <el-option label="赛艇训练" value="赛艇训练" />
-                <el-option label="力量训练" value="力量训练" />
-                <el-option label="有氧训练" value="有氧训练" />
+                <el-option label="兴趣社交" value="兴趣社交" />
+                <el-option label="活动社交" value="活动社交" />
+                <el-option label="学习社交" value="学习社交" />
               </el-select>
             </div>
           </div>
 
-          <!-- 训练数据概览 -->
+          <!-- 社交数据概览 -->
           <div class="overview-cards">
             <div class="overview-card" v-for="(stat, index) in trendStatItems" :key="index">
               <div class="overview-value">{{ stat.value }}</div>
@@ -93,7 +93,7 @@
       <!-- 右侧AI助手面板 -->
       <div class="ai-panel">
         <div class="ai-header">
-          <h2>AI 训练助手</h2>
+          <h2>AI 社交助手</h2>
           <el-button link @click="clearChat">清空对话</el-button>
         </div>
 
@@ -144,10 +144,10 @@
       </div>
     </div>
 
-    <!-- 训练记录表格 -->
+    <!-- 社交记录表格 -->
     <div class="records-section">
       <div class="section-header">
-        <h2>训练记录</h2>
+        <h2>社交记录</h2>
         <div class="filter-group">
           <div class="date-filters">
             <el-date-picker v-model="startDate" type="date" placeholder="开始日期" class="filter-item"
@@ -155,12 +155,12 @@
             <el-date-picker v-model="endDate" type="date" placeholder="结束日期" class="filter-item"
               :disabled-date="disableEndDate" @change="handleDateChange" />
           </div>
-          <el-select v-model="currentTrainingType" placeholder="训练类型" class="filter-item"
-            @change="handleTrainingTypeChange">
+          <el-select v-model="currentSocialType" placeholder="社交类型" class="filter-item"
+            @change="handleSocialTypeChange">
             <el-option label="全部类型" value="all" />
-            <el-option label="赛艇训练" value="赛艇训练" />
-            <el-option label="力量训练" value="力量训练" />
-            <el-option label="有氧训练" value="有氧训练" />
+            <el-option label="兴趣社交" value="兴趣社交" />
+            <el-option label="活动社交" value="活动社交" />
+            <el-option label="学习社交" value="学习社交" />
           </el-select>
           <div class="action-group">
             <el-button type="primary" @click="handleAIAnalysis">
@@ -171,7 +171,7 @@
             <el-button type="primary" @click="showUploadDialog">
               <el-icon>
                 <Plus />
-              </el-icon>上传训练
+              </el-icon>添加记录
             </el-button>
             <el-button @click="refreshHistory">
               <el-icon>
@@ -183,11 +183,11 @@
       </div>
 
       <div class="table-container">
-        <el-table :data="trainingHistory" style="width: 100%" v-loading="loading"
+        <el-table :data="socialHistory" style="width: 100%" v-loading="loading"
           :header-cell-style="{ background: '#f5f7fa' }">
-          <el-table-column prop="trainingDate" label="日期" min-width="180">
+          <el-table-column prop="socialDate" label="日期" min-width="180">
             <template #default="scope">
-              {{ formatDate(scope.row.trainingDate) }}
+              {{ formatDate(scope.row.socialDate) }}
             </template>
           </el-table-column>
           <el-table-column prop="duration" label="时长" min-width="120">
@@ -195,20 +195,20 @@
               {{ formatDuration(scope.row.duration) }}
             </template>
           </el-table-column>
-          <el-table-column prop="distance" label="距离(km)" min-width="120">
+          <el-table-column prop="participants" label="参与人数" min-width="120">
             <template #default="scope">
-              {{ (scope.row.distance || 0).toFixed(2) }}
+              {{ scope.row.participants || 0 }}
             </template>
           </el-table-column>
-          <el-table-column prop="calories" label="卡路里" min-width="120">
+          <el-table-column prop="interactions" label="互动次数" min-width="120">
             <template #default="scope">
-              {{ (scope.row.calories || 0).toFixed(2) }}
+              {{ scope.row.interactions || 0 }}
             </template>
           </el-table-column>
-          <el-table-column prop="type" label="训练类型" min-width="120" />
+          <el-table-column prop="type" label="社交类型" min-width="120" />
           <el-table-column label="操作" width="100" fixed="right">
             <template #default="scope">
-              <el-button link type="danger" @click="handleDeleteTraining(scope.row.id)">
+              <el-button link type="danger" @click="handleDeleteSocial(scope.row.id)">
                 删除
               </el-button>
             </template>
@@ -266,14 +266,14 @@ echarts.use([
 // 获取用户状态
 const userStore = useUserStore()
 
-// 训练历史记录
-const trainingHistory = ref([])
+// 社交历史记录
+const socialHistory = ref([])
 const uploadForm = ref({
-  type: '赛艇训练',
-  trainingDate: new Date().toISOString().slice(0, 19).replace('T', ' '),
+  type: '兴趣社交',
+  socialDate: new Date().toISOString().slice(0, 19).replace('T', ' '),
   duration: 30,
-  distance: 5.0,
-  calories: null
+  participants: 5,
+  interactions: 10
 })
 const chatMessages = ref([])
 const chatInput = ref('')
@@ -284,13 +284,42 @@ const isLoading = ref(false)
 // 新增的状态变量
 const uploadDialogVisible = ref(false)
 const detailDialogVisible = ref(false)
-const statistics = ref([])
+const statistics = ref([
+  {
+    title: '社交次数',
+    value: '15次',
+    change: '较上周 +20%',
+    trend: 'up',
+    icon: 'Calendar'
+  },
+  {
+    title: '社交时长',
+    value: '12小时30分',
+    change: '较上周 +15%',
+    trend: 'up',
+    icon: 'Timer'
+  },
+  {
+    title: '互动次数',
+    value: '128次',
+    change: '较上周 +25%',
+    trend: 'up',
+    icon: 'ChatDotRound'
+  },
+  {
+    title: '新增好友',
+    value: '8人',
+    change: '较上周 +40%',
+    trend: 'up',
+    icon: 'User'
+  }
+])
 const currentPage = ref(1)
 const pageSize = ref(10)
 const totalRecords = ref(0)
 const selectedTraining = ref(null)
 const formRef = ref(null)
-const currentTrainingType = ref('all')  // 默认显示所有类型
+const currentSocialType = ref('all')  // 默认显示所有类型
 const startDate = ref(null)
 const endDate = ref(null)
 const loading = ref(false)
@@ -299,7 +328,7 @@ const loading = ref(false)
 const trendStats = ref({})
 
 // 添加趋势分析筛选相关的响应式变量
-const trendTrainingType = ref('赛艇训练') // 默认选择赛艇训练
+const trendSocialType = ref('兴趣社交') // 默认选择兴趣社交
 const trendStartDate = ref(null)
 const trendEndDate = ref(null)
 
@@ -351,7 +380,7 @@ const handleDateChange = () => {
 const fetchStatistics = async () => {
   try {
     const queryParams = {
-      type: currentTrainingType.value === 'all' ? undefined : currentTrainingType.value,
+      type: currentSocialType.value === 'all' ? undefined : currentSocialType.value,
       startDate: startDate.value || undefined,
       endDate: endDate.value || undefined
     }
@@ -362,32 +391,32 @@ const fetchStatistics = async () => {
       const stats = res.data
       statistics.value = [
         {
-          title: '训练次数',
+          title: '社交次数',
           value: `${stats.totalSessions || 73}次`,
           change: `较上周 ${stats.sessionChange > 0 ? '+' : ''}${stats.sessionChange || 0}%`,
           trend: (stats.sessionChange || 0) >= 0 ? 'up' : 'down',
           icon: 'Calendar'
         },
         {
-          title: '训练时长',
+          title: '社交时长',
           value: `${Math.floor((stats.totalDuration || 0) / 60)}小时${(stats.totalDuration || 0) % 60}分`,
           change: `较上周 ${stats.durationChange > 0 ? '+' : ''}${stats.durationChange || 0}%`,
           trend: (stats.durationChange || 0) >= 0 ? 'up' : 'down',
           icon: 'Timer'
         },
         {
-          title: '训练距离',
-          value: `${(stats.totalDistance || 0).toFixed(1)}km`,
-          change: `较上周 ${stats.distanceChange > 0 ? '+' : ''}${stats.distanceChange || 0}%`,
-          trend: (stats.distanceChange || 0) >= 0 ? 'up' : 'down',
-          icon: 'Position'
+          title: '互动次数',
+          value: `${stats.totalInteractions || 0}次`,
+          change: `较上周 ${stats.interactionChange > 0 ? '+' : ''}${stats.interactionChange || 0}%`,
+          trend: (stats.interactionChange || 0) >= 0 ? 'up' : 'down',
+          icon: 'ChatDotRound'
         },
         {
-          title: '平均配速',
-          value: stats.averagePace ? `${stats.averagePace}/500m` : '-',
-          change: stats.paceChange ? `较上周 ${stats.paceChange}秒` : '-',
-          trend: (stats.paceChange || 0) <= 0 ? 'up' : 'down',
-          icon: 'SpeedMeter'
+          title: '新增好友',
+          value: `${stats.newFriends || 0}人`,
+          change: `较上周 ${stats.friendChange > 0 ? '+' : ''}${stats.friendChange || 0}%`,
+          trend: (stats.friendChange || 0) >= 0 ? 'up' : 'down',
+          icon: 'User'
         }
       ]
     }
@@ -397,14 +426,14 @@ const fetchStatistics = async () => {
   }
 }
 
-// 获取训练历史记录
+// 获取社交历史记录
 const refreshHistory = async () => {
   loading.value = true
   try {
     const queryParams = {
       page: currentPage.value,
       size: pageSize.value,
-      type: currentTrainingType.value === 'all' ? undefined : currentTrainingType.value,
+      type: currentSocialType.value === 'all' ? undefined : currentSocialType.value,
       startDate: startDate.value || undefined,
       endDate: endDate.value || undefined
     }
@@ -418,17 +447,17 @@ const refreshHistory = async () => {
       console.log('Processing training data:', res.data)
       // 将数据按时间倒序排列
       const sortedList = [...res.data.list].sort((a, b) => {
-        return new Date(b.trainingDate) - new Date(a.trainingDate)
+        return new Date(b.socialDate) - new Date(a.socialDate)
       })
 
-      trainingHistory.value = sortedList.map(record => {
+      socialHistory.value = sortedList.map(record => {
         console.log('Processing record:', record)
         return {
           id: record.id,
-          trainingDate: record.trainingDate,
+          socialDate: record.socialDate,
           duration: Number(record.duration || 0),
-          distance: Number(record.distance || 0),
-          calories: Number(record.calories || 0),
+          participants: Number(record.participants || 0),
+          interactions: Number(record.interactions || 0),
           type: record.type || '未知类型'
         }
       })
@@ -437,21 +466,21 @@ const refreshHistory = async () => {
       pageSize.value = Number(res.data.size || 10)
       currentPage.value = Number(res.data.page || 1)
 
-      console.log('Processed training history:', trainingHistory.value)
+      console.log('Processed training history:', socialHistory.value)
 
-      if (trainingHistory.value.length === 0) {
-        ElMessage.info('暂无训练记录')
+      if (socialHistory.value.length === 0) {
+        ElMessage.info('暂无社交记录')
       }
     } else {
       console.warn('Invalid response format:', res)
-      trainingHistory.value = []
+      socialHistory.value = []
       totalRecords.value = 0
-      ElMessage.warning('获取训练记录失败')
+      ElMessage.warning('获取社交记录失败')
     }
   } catch (error) {
     console.error('获取历史记录失败:', error)
     ElMessage.error(error.message || '获取历史记录失败')
-    trainingHistory.value = []
+    socialHistory.value = []
     totalRecords.value = 0
   } finally {
     loading.value = false
@@ -468,9 +497,9 @@ const handlePageChange = async (page) => {
 const handleAIAnalysis = async () => {
   try {
     isLoading.value = true
-    // 获取训练统计数据
+    // 获取社交统计数据
     const statsParams = {
-      type: currentTrainingType.value === 'all' ? undefined : currentTrainingType.value,
+      type: currentSocialType.value === 'all' ? undefined : currentSocialType.value,
       startDate: startDate.value || undefined,
       endDate: endDate.value || undefined
     }
@@ -478,21 +507,19 @@ const handleAIAnalysis = async () => {
     const statsRes = await getTrainingStatistics(statsParams)
 
     if (!statsRes.success) {
-      throw new Error(statsRes.message || '获取训练统计数据失败')
+      throw new Error(statsRes.message || '获取社交统计数据失败')
     }
 
     // 构建发送给AI的消息
     const statsData = statsRes.data
     const aiPrompt = `
-      请根据以下赛艇训练数据进行分析并给出建议：
-      总训练时长：${Math.floor((statsData.totalDuration || 0) / 60)}小时${(statsData.totalDuration || 0) % 60}分钟
-      总训练距离：${(statsData.totalDistance || 0).toFixed(1)}km
-      平均配速：${statsData.averagePace || '-'}
+      请根据以下社交数据进行分析并给出建议：
+      总社交时长：${Math.floor((statsData.totalDuration || 0) / 60)}小时${(statsData.totalDuration || 0) % 60}分钟
+      总互动次数：${statsData.totalInteractions || 0}次
       与上周相比：
-      - 训练次数变化：${statsData.sessionChange > 0 ? '+' : ''}${statsData.sessionChange || 0}%
-      - 训练时长变化：${statsData.durationChange > 0 ? '+' : ''}${statsData.durationChange || 0}%
-      - 训练距离变化：${statsData.distanceChange > 0 ? '+' : ''}${statsData.distanceChange || 0}%
-      - 配速变化：${statsData.paceChange ? statsData.paceChange + '秒' : '-'}
+      - 社交次数变化：${statsData.sessionChange > 0 ? '+' : ''}${statsData.sessionChange || 0}%
+      - 社交时长变化：${statsData.durationChange > 0 ? '+' : ''}${statsData.durationChange || 0}%
+      - 互动次数变化：${statsData.interactionChange > 0 ? '+' : ''}${statsData.interactionChange || 0}%
     `
 
     // 调用AI接口
@@ -520,7 +547,7 @@ const handleAIAnalysis = async () => {
   }
 }
 
-// 提交训练记录
+// 提交社交记录
 const handleSubmitTraining = async () => {
   try {
     if (!formRef.value) return
@@ -547,22 +574,22 @@ const handleSubmitTraining = async () => {
       uploadDialogVisible.value = false
       // 重置表单
       uploadForm.value = {
-        type: '赛艇训练',
-        trainingDate: new Date().toISOString().slice(0, 19).replace('T', ' '),
+        type: '兴趣社交',
+        socialDate: new Date().toISOString().slice(0, 19).replace('T', ' '),
         duration: 30,
-        distance: 5.0,
-        calories: null
+        participants: 5,
+        interactions: 10
       }
       formRef.value.resetFields()
       selectedTraining.value = null
-      currentTrainingType.value = 'all'  // 重置训练类型筛选
+      currentSocialType.value = 'all'  // 重置社交类型筛选
       await refreshHistory()
       await fetchStatistics()
     } else {
       throw new Error(res?.message || (selectedTraining.value ? '更新失败' : '添加失败'))
     }
   } catch (error) {
-    console.error('提交训练记录失败:', error)
+    console.error('提交社交记录失败:', error)
     ElMessage.error(error.message || '提交失败')
   }
 }
@@ -622,24 +649,24 @@ const sendMessage = async (isMediaAnalysis = false) => {
   // 构造用户问题
   let userQuestion = ''
   if (isMediaAnalysis) {
-    userQuestion = '作为一名专业的赛艇教练，请对以下赛艇训练姿势进行分析和指导：\n\n' +
-      '训练者目前的划桨姿势：\n' +
-      '1. 起划阶段：\n' +
-      '   - 身体前倾约45度\n' +
-      '   - 手臂完全伸直\n' +
-      '   - 小腿略微前倾\n' +
-      '   - 脚掌紧贴踏板\n\n' +
-      '2. 驱动阶段：\n' +
-      '   - 腿部用力蹬伸\n' +
-      '   - 手臂开始弯曲时腿还未完全伸直\n' +
-      '   - 身体后仰约30度\n' +
-      '   - 划桨高度保持在胸部位置\n\n' +
-      '3. 收桨阶段：\n' +
-      '   - 手臂收至腹部位置\n' +
-      '   - 上身后仰\n' +
-      '   - 收放比例约为1:1.5\n' +
-      '   - 动作节奏较快\n\n' +
-      '请从专业角度分析这些动作要点，指出存在的问题，并给出具体的改进建议。'
+    userQuestion = '作为一名专业的社交教练，请对以下社交行为进行分析和指导：\n\n' +
+      '社交者目前的社交行为：\n' +
+      '1. 兴趣社交：\n' +
+      '   - 参与兴趣小组或活动\n' +
+      '   - 与志同道合的人交流\n' +
+      '   - 分享兴趣爱好\n' +
+      '   - 建立长期稳定的社交关系\n\n' +
+      '2. 活动社交：\n' +
+      '   - 参加团队活动或聚会\n' +
+      '   - 与不同背景的人交流\n' +
+      '   - 扩大社交圈子\n' +
+      '   - 享受社交活动带来的乐趣\n\n' +
+      '3. 学习社交：\n' +
+      '   - 加入学习小组或课程\n' +
+      '   - 与专业人士交流\n' +
+      '   - 获取新知识和技能\n' +
+      '   - 建立专业网络\n\n' +
+      '请从专业角度分析这些行为要点，指出存在的问题，并给出具体的改进建议。'
   } else {
     userQuestion = chatInput.value
   }
@@ -708,25 +735,25 @@ const refreshAnalysis = async () => {
       // ... 处理统计数据的逻辑
     } else {
       analysisContent.value = `
-            <h3>本周训练分析报告</h3>
-            <p>您本周共完成5次训练，总距离26.5公里，平均配速2:05。相比上周：</p>
+            <h3>本周社交分析报告</h3>
+            <p>您本周共参与了15次社交活动，总时长12小时30分钟，平均每次活动时长0.82小时。相比上周：</p>
             <ul>
-              <li>训练频次增加1次</li>
-              <li>总距离提升15%</li>
-              <li>平均配速提升3秒</li>
+              <li>社交次数增加1次</li>
+              <li>总时长提升15%</li>
+              <li>平均每次活动时长提升3分钟</li>
             </ul>
             <h4>技术分析</h4>
-            <p>根据您的训练数据，我们发现：</p>
+            <p>根据您的社交数据，我们发现：</p>
             <ul>
-              <li>起划阶段发力更加平稳</li>
-              <li>收放比例保持在1:2左右，符合标准要求</li>
-              <li>长距离训练中后半程配速波动减小</li>
+              <li>兴趣社交参与度最高</li>
+              <li>活动社交和学习社交参与度相近</li>
+              <li>长社交时间中后半程参与度波动减小</li>
             </ul>
             <h4>建议</h4>
             <ol>
-              <li>可以适当增加高强度间歇训练的比例</li>
-              <li>建议每周安排1-2次专门的技术训练</li>
-              <li>注意恢复训练的质量，避免过度疲劳</li>
+              <li>可以适当增加高强度社交活动的时间</li>
+              <li>建议每周安排1-2次专门的学习社交活动</li>
+              <li>注意恢复社交的质量，避免过度疲劳</li>
             </ol>
         `
     }
@@ -735,8 +762,8 @@ const refreshAnalysis = async () => {
   }
 }
 
-// 添加训练类型名称映射函数
-const getTrainingTypeName = (type) => {
+// 添加社交类型名称映射函数
+const getSocialTypeName = (type) => {
   return type || '未知类型'
 }
 
@@ -765,10 +792,10 @@ const showUploadDialog = () => {
   uploadDialogVisible.value = true
 }
 
-// 删除训练记录
-const handleDeleteTraining = async (id) => {
+// 删除社交记录
+const handleDeleteSocial = async (id) => {
   try {
-    await ElMessageBox.confirm('确定要删除这条训练记录吗？', '提示', {
+    await ElMessageBox.confirm('确定要删除这条社交记录吗？', '提示', {
       type: 'warning',
       confirmButtonText: '确定',
       cancelButtonText: '取消'
@@ -787,7 +814,7 @@ const handleDeleteTraining = async (id) => {
     }
   } catch (error) {
     if (error !== 'cancel') {
-      console.error('删除训练记录失败:', error)
+      console.error('删除社交记录失败:', error)
       ElMessage.error(typeof error === 'string' ? error : error.message || '删除失败')
     }
   } finally {
@@ -797,10 +824,10 @@ const handleDeleteTraining = async (id) => {
 
 // 添加表单验证规则
 const formRules = {
-  type: [{ required: true, message: '请选择训练类型', trigger: 'change' }],
-  trainingDate: [{ required: true, message: '请选择训练日期', trigger: 'change' }],
-  duration: [{ required: true, message: '请输入训练时长', trigger: 'blur' }],
-  distance: [{ required: true, message: '请输入训练距离', trigger: 'blur' }]
+  type: [{ required: true, message: '请选择社交类型', trigger: 'change' }],
+  socialDate: [{ required: true, message: '请选择社交日期', trigger: 'change' }],
+  duration: [{ required: true, message: '请输入社交时长', trigger: 'blur' }],
+  participants: [{ required: true, message: '请输入参与人数', trigger: 'blur' }]
 }
 
 // 在对话框关闭时重置表单
@@ -839,7 +866,7 @@ const handleTrendFilterChange = async () => {
     }
 
     const params = {
-      type: trendTrainingType.value,
+      type: trendSocialType.value,
       startDate: trendStartDate.value || undefined,
       endDate: trendEndDate.value || undefined
     }
@@ -889,7 +916,7 @@ const initIntensityChart = (data) => {
   intensityChart = echarts.init(intensityChartRef.value)
   const option = {
     title: {
-      text: '训练强度分布',
+      text: '社交类型分布',
       left: 'center'
     },
     tooltip: {
@@ -901,7 +928,7 @@ const initIntensityChart = (data) => {
     },
     series: [
       {
-        name: '训练强度',
+        name: '社交类型',
         type: 'pie',
         radius: ['40%', '70%'],
         avoidLabelOverlap: false,
@@ -942,7 +969,7 @@ const initProgressChart = (data) => {
   progressChart = echarts.init(progressChartRef.value)
   const option = {
     title: {
-      text: '训练进展趋势',
+      text: '社交活跃度趋势',
       left: 'center'
     },
     tooltip: {
@@ -955,7 +982,7 @@ const initProgressChart = (data) => {
       }
     },
     legend: {
-      data: ['训练距离', '平均配速'],
+      data: ['互动次数', '参与人数'],
       top: 30
     },
     grid: {
@@ -974,28 +1001,28 @@ const initProgressChart = (data) => {
     yAxis: [
       {
         type: 'value',
-        name: '距离(km)',
+        name: '互动次数',
         position: 'left'
       },
       {
         type: 'value',
-        name: '配速(min/500m)',
+        name: '参与人数',
         position: 'right'
       }
     ],
     series: [
       {
-        name: '训练距离',
+        name: '互动次数',
         type: 'line',
         smooth: true,
-        data: [5, 7, 6, 8, 9, 7, 8]
+        data: [15, 20, 18, 25, 22, 30, 28]
       },
       {
-        name: '平均配速',
+        name: '参与人数',
         type: 'line',
         yAxisIndex: 1,
         smooth: true,
-        data: [2.5, 2.4, 2.3, 2.4, 2.2, 2.3, 2.1]
+        data: [5, 7, 6, 8, 9, 12, 10]
       }
     ]
   }
@@ -1009,7 +1036,7 @@ const initTimeDistributionChart = (data) => {
   timeDistributionChart = echarts.init(timeDistributionChartRef.value)
   const option = {
     title: {
-      text: '训练时间分布',
+      text: '社交时间分布',
       left: 'center'
     },
     tooltip: {
@@ -1030,14 +1057,14 @@ const initTimeDistributionChart = (data) => {
     },
     yAxis: {
       type: 'value',
-      name: '训练次数'
+      name: '社交次数'
     },
     series: [
       {
-        name: '训练频次',
+        name: '社交频次',
         type: 'bar',
         barWidth: '60%',
-        data: [2, 4, 3, 5, 6, 2]
+        data: [2, 4, 3, 5, 8, 4]
       }
     ]
   }
@@ -1051,7 +1078,7 @@ const initGoalCompletionChart = (data) => {
   goalCompletionChart = echarts.init(goalCompletionChartRef.value)
   const option = {
     title: {
-      text: '目标完成度',
+      text: '社交目标完成度',
       left: 'center'
     },
     tooltip: {
@@ -1062,11 +1089,11 @@ const initGoalCompletionChart = (data) => {
     },
     radar: {
       indicator: [
-        { name: '训练时长', max: 100 },
-        { name: '训练距离', max: 100 },
-        { name: '训练频次', max: 100 },
-        { name: '平均配速', max: 100 },
-        { name: '卡路里消耗', max: 100 }
+        { name: '社交时长', max: 100 },
+        { name: '互动次数', max: 100 },
+        { name: '社交频次', max: 100 },
+        { name: '参与人数', max: 100 },
+        { name: '新增好友', max: 100 }
       ]
     },
     series: [
@@ -1074,7 +1101,7 @@ const initGoalCompletionChart = (data) => {
         type: 'radar',
         data: [
           {
-            value: [80, 85, 70, 90, 75],
+            value: [85, 90, 75, 80, 70],
             name: '目标完成度',
             areaStyle: {
               color: 'rgba(64,158,255,0.3)'
@@ -1185,7 +1212,7 @@ onMounted(async () => {
     // 添加初始AI欢迎消息
     chatMessages.value = [
       {
-        content: "你好！我是你的AI训练助手。我可以帮你分析训练数据，提供专业建议。有什么我可以帮你的吗？",
+        content: "你好！我是你的AI社交助手。我可以帮你分析社交数据，提供社交建议，帮助你更好地进行社交活动。有什么我可以帮你的吗？",
         type: "ai",
         time: new Date().toLocaleTimeString()
       }
@@ -1238,7 +1265,7 @@ onMounted(async () => {
   flex-shrink: 0; /* 防止被压缩 */
 }
 
-/* 训练记录表格区域样式 */
+/* 社交记录表格区域样式 */
 .records-section {
   width: 100%; /* 横向铺满 */
   background: #fff;

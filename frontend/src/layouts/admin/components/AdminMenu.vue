@@ -82,7 +82,7 @@ const menus = [
         'path': '/main/club/list',
     },
     {
-        'name': '赛艇社区',
+        'name': '社区',
         'icon': new URL('@/assets/icons/community.png', import.meta.url).href,
         'isCustomIcon': true,
         'path': '/main/community',
@@ -102,7 +102,7 @@ const menus = [
         ]
     },
     {
-        'name': '训练分析',
+        'name': 'ai天地',
         'icon': 'DataAnalysis',
         'isCustomIcon': false,
         'path': '/main/training/analysis'

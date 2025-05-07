@@ -524,7 +524,7 @@ export default {
 
     const statsData = {
       rowingYears: {
-        label: '赛艇年数',
+        label: '社交年数',
         icon: 'fas fa-ship',
         value: '3年'
       },

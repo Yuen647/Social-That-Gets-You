@@ -5,7 +5,7 @@
         <div class="header-content">
           <div class="title-section">
             <h2 class="text-2xl font-bold">社区动态</h2>
-            <p class="text-gray-600 mt-2">发现精彩的赛艇故事</p>
+            <p class="text-gray-600 mt-2">发现精彩的生活故事</p>
           </div>
           
           <div class="search-bar">

@@ -5,20 +5,20 @@
             <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent z-10"></div>
             <div class="parallax-bg" 
                  :style="{ transform: `translateY(${scrollY * 0.5}px)` }">
-                <img src="@/assets/images/rowing-banner.png" alt="Rowing" class="w-full h-[700px] object-cover">
+                <img src="@/assets/images/social-banner.jpg" alt="Social Platform" class="w-full h-[700px] object-cover">
             </div>
             <div class="absolute top-1/2 left-20 transform -translate-y-1/2 z-20 text-white"
                  :style="{ transform: `translate3d(0, ${-scrollY * 0.2}px, 0)` }">
-                <h1 class="text-6xl font-bold mb-6 animate-fade-in-up">探索赛艇运动的魅力</h1>
-                <p class="text-xl mb-10 animate-fade-in-up animation-delay-200">加入我们，体验团队协作与自我突破的完美结合</p>
+                <h1 class="text-6xl font-bold mb-6 animate-fade-in-up">发现志同道合的朋友，分享精彩生活</h1>
+   
                 <el-button type="primary" size="large" class="animate-fade-in-up animation-delay-400 hover:scale-105 transition-transform"
                     @click="goToCommunity">
-                    开始探索
+                    立即加入
                 </el-button>
             </div>
         </div>
 
-        <!-- 统计数据展示 - 移到 Banner 下方 -->
+        <!-- 统计数据展示 -->
         <div class="stats-section relative -mt-20 z-20 mb-20">
             <div class="max-w-7xl mx-auto px-8">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -74,7 +74,7 @@
         <!-- 最新动态区 -->
         <div class="news-section py-20 px-8 bg-gray-50">
             <h2 class="text-4xl font-bold text-center mb-16 relative">
-                最新动态
+                社区动态
                 <div class="absolute w-20 h-1 bg-blue-600 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -143,67 +143,67 @@ const goToCommunity = () => {
 
 const features = [
     {
-        icon: 'Trophy',
-        title: '专业训练',
-        description: '科学的训练计划和数据分析，为您提供个性化的训练方案，助您不断突破自我。'
+        icon: 'UserFilled',
+        title: '智能匹配',
+        description: '基于兴趣和性格的智能社交匹配，帮你找到志同道合的朋友。'
     },
     {
-        icon: 'UserFilled',
-        title: '社区互动',
-        description: '结识志同道合的伙伴，分享训练心得与经验，共同进步。'
+        icon: 'Trophy',
+        title: '兴趣社区',
+        description: '加入你感兴趣的社区，结识新朋友，分享生活点滴。'
     },
     {
         icon: 'Histogram',
-        title: '数据追踪',
-        description: '实时监控训练数据，科学分析进步轨迹，让每次训练都更有价值。'
+        title: '实时互动',
+        description: '随时随地与好友保持联系，分享精彩瞬间。'
     }
 ]
 
 const latestNews = ref([
     {
-        title: '2025赛艇春季赛事预告',
-        description: '即将开启的春季赛事，带来更多精彩对决',
+        title: '2024春季社交活动预告',
+        description: '即将开启的春季社交活动，带来更多精彩互动',
         image: new URL('@/assets/images/news-1.jpg', import.meta.url).href,
         date: '2024-12-31',
-        link: 'https://www.aislharrow.com/rowing-regatta/zh/'
+        link: '#'
     },
     {
-        title: '训练技巧分享',
-        description: '专业教练为您解析赛艇技巧要点',
+        title: '社交技巧分享',
+        description: '专业导师为您解析社交技巧要点',
         image: new URL('@/assets/images/news-2.jpg', import.meta.url).href,
         date: '2024-11-11',
-        link: 'https://www.sohu.com/a/407660155_120763602'
+        link: '#'
     },
     {
         title: '社区活动回顾',
         description: '回顾上周末精彩的社区联谊活动',
         image: new URL('@/assets/images/news-3.jpg', import.meta.url).href,
         date: '2024-12-05',
-        link: 'https://news.qq.com/rain/a/20240926A0ACCG00'
+        link: '#'
     }
 ])
 
 const stats = [
     { 
-        value: 1000, 
+        value: 200, 
         suffix: '+', 
         label: '活跃用户',
         icon: User
     },
     { 
-        value: 100, 
+        value: 20, 
         suffix: '+', 
-        label: '专业教练',
+        label: '兴趣社区',
         icon: Medal
     },
     { 
-        value: 5000, 
+        value: 1000, 
         suffix: '+', 
-        label: '训练记录',
+        label: '社交互动',
         icon: DataLine
     },
     { 
-        value: 98, 
+        value: 95, 
         suffix: '%', 
         label: '用户好评',
         icon: Star

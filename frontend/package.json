@@ -1,7 +1,8 @@
 {
-  "name": "airrowing",
-  "version": "0.0.0",
+  "name": "social-that-gets-you",
+  "version": "0.1.0",
   "private": true,
+  "description": "知你社交 - 一个智能社交平台",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

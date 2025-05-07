@@ -5,8 +5,8 @@
                 <img src="@/assets/ins.png" class="w-full h-full object-cover opacity-60" alt="background">
             </div>
             <div class="relative h-full flex flex-col justify-center items-center p-10 animate__animated animate__bounceInLeft animate__fast">
-                <h2 class="font-bold text-5xl mb-4 text-white">AirRowing</h2>
-                <p class="text-white text-xl mb-8">一款专注赛艇运动的训练与社交平台</p>
+                <h2 class="font-bold text-5xl mb-4 text-white">知你社交</h2>
+                <p class="text-white text-xl mb-8"> ———— 懂你的社交平台</p>
             </div>
         </div>
         <div class="col-span-2 order-1 md:col-span-1 md:order-2 bg-white">
