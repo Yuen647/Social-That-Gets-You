@@ -1,5 +1,5 @@
 server:
-  port: 7000 # 指定启动端口
+  port: 7001 # 指定启动端口
   address: 0.0.0.0
 
 spring:
