@@ -131,7 +131,9 @@ public class NoteServiceImpl implements NoteService {
         }
 
         // RPC: 调用分布式 ID 生成服务，生成笔记 ID
-        String snowflakeIdId = distributedIdGeneratorRpcService.getSnowflakeId();
+        //String snowflakeIdId = distributedIdGeneratorRpcService.getSnowflakeId();
+        String snowflakeIdId = String.valueOf(Math.abs(UUID.randomUUID().getMostSignificantBits()));
+        // 笔记内容 UUID
         // 笔记内容 UUID
         String contentUuid = null;
 
