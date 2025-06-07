@@ -5,7 +5,7 @@ import Admin from '@/layouts/admin/admin.vue'
 import Login from '@/pages/login.vue'
 import NoteList from '@/pages/note/list.vue'
 import NoteDetail from '@/pages/note/detail.vue'
-import TrainingAnalysis from '@/pages/training/analysis.vue'
+import AISection from '@/pages/training/ai.vue'
 import UserProfile from '@/pages/user/profile.vue'
 import UserView from '@/pages/user/view.vue'
 import Welcome from '@/pages/home/welcome.vue'
@@ -86,9 +86,9 @@ const routes = [
             {
                 path: 'training/analysis',
                 name: 'training-analysis',
-                component: TrainingAnalysis,
+                component: AISection,
                 meta: {
-                    title: '训练分析'
+                    title: 'AI天地'
                 }
             },
             {
