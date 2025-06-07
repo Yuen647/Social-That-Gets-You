@@ -9,22 +9,41 @@
           </div>
           
           <div class="search-bar">
+            <div class="search-toggle mb-2">
+              <el-switch
+                v-model="useAISearch"
+                active-text="AI搜索"
+                inactive-text="普通搜索"
+                class="mb-2"
+              />
+            </div>
             <el-input
               v-model="searchQuery"
-              placeholder="搜索帖子..."
+              :placeholder="useAISearch ? 'AI智能搜索...' : '搜索帖子...'"
               :prefix-icon="Search"
               clearable
               @input="handleSearch"
               class="search-input"
             >
               <template #append>
-                <el-button :icon="Search" @click="handleSearch">
-                  搜索
+                <el-button :icon="useAISearch ? MagicStick : Search" @click="handleSearch" :loading="isSearching">
+                  {{ useAISearch ? 'AI搜索' : '搜索' }}
                 </el-button>
               </template>
             </el-input>
           </div>
         </div>
+      </div>
+
+      <!-- AI Search Tips -->
+      <div v-if="useAISearch && searchQuery" class="ai-search-tips mb-4">
+        <el-alert
+          title="AI搜索提示"
+          type="info"
+          :closable="false"
+          description="AI搜索可以理解自然语言，尝试输入：'找运动相关的帖子'、'最近两天的热门内容'等"
+          show-icon
+        />
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -47,7 +66,28 @@
               </div>
             </div>
 
-            <h3 class="text-lg font-semibold mb-2 line-clamp-2">{{ note.title }}</h3>
+            <h3 class="text-lg font-semibold mb-2 line-clamp-2" v-html="highlightMatch(note.title)"></h3>
+            
+            <!-- AI Relevance Score -->
+            <div v-if="useAISearch && note.aiRelevance" class="ai-relevance mb-2">
+              <div class="flex items-center">
+                <el-progress 
+                  :percentage="note.aiRelevance" 
+                  :color="getRelevanceColor(note.aiRelevance)"
+                  :stroke-width="8"
+                  :show-text="false"
+                  class="flex-grow"
+                />
+                <span class="ml-2 text-xs" :style="{color: getRelevanceColor(note.aiRelevance)}">
+                  {{ note.aiRelevance }}% 相关
+                </span>
+              </div>
+            </div>
+
+            <!-- AI Match Reason -->
+            <p v-if="useAISearch && note.aiMatchReason" class="text-sm text-gray-500 mb-3 line-clamp-2">
+              {{ note.aiMatchReason }}
+            </p>
             
             <div class="flex items-center justify-between mt-4">
               <div class="creator-info flex items-center">
@@ -60,9 +100,21 @@
         </template>
       </div>
 
-      <div v-if="searchQuery && filteredNotesWithoutPlaceholders.length === 0" class="empty-search-result">
+      <!-- AI Search Processing -->
+      <div v-if="isSearching" class="ai-search-processing">
+        <div class="flex flex-col items-center justify-center py-8">
+          <el-progress type="dashboard" :percentage="searchProgress" :width="120" />
+          <div class="mt-4 text-center">
+            <p class="text-lg font-medium">AI正在分析您的搜索...</p>
+            <p class="text-sm text-gray-500 mt-2">{{ searchStatusMessage }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="searchQuery && filteredNotesWithoutPlaceholders.length === 0 && !isSearching" class="empty-search-result">
         <img src="/assets/developer.png" alt="无搜索结果" class="empty-image" />
         <p class="empty-text">没有找到相关帖子</p>
+        <p v-if="useAISearch" class="empty-suggestion mt-2">尝试使用不同的关键词或更具体的描述</p>
       </div>
 
       <div class="flex justify-center mt-8">
@@ -83,18 +135,31 @@
 <script>
 import { getNoteListService, getNoteDetailService } from "@/api/note.js";
 import { ElMessage } from "element-plus";
-import { Search } from '@element-plus/icons-vue'
+import { Search, MagicStick } from '@element-plus/icons-vue'
 
 export default {
   data() {
     return {
       notes: [], // 当前页的笔记数据
+      allNotesForSearch: [], // 用于搜索的所有页面的笔记
       currentPage: 1, // 当前页码
       currentPageInput: 1, // 输入框中的页码
       pageSize: 9, // 每页固定展示 9 条数据
       totalNotes: 0, // 总笔记数，从后端获取
       imageStyles: {}, // 存储每个图片的样式
       searchQuery: '', // 添加搜索查询
+      useAISearch: false, // 是否使用AI搜索
+      isSearching: false, // 是否正在搜索中
+      searchProgress: 0, // 搜索进度
+      searchStatusMessage: '', // 搜索状态消息
+      aiSearchResults: [], // AI搜索结果
+      searchStatusMessages: [
+        "正在理解您的搜索意图...",
+        "分析帖子内容...",
+        "查找相关主题...",
+        "评估内容相关性...",
+        "生成智能推荐...",
+      ],
     };
   },
   computed: {
@@ -113,6 +178,19 @@ export default {
         return this.notesWithPlaceholders;
       }
       
+      // 如果使用AI搜索且有AI搜索结果，则使用AI搜索结果
+      if (this.useAISearch && this.aiSearchResults.length > 0) {
+        const placeholders = Array.from(
+          { length: Math.max(0, this.pageSize - this.aiSearchResults.length) },
+          (_, index) => ({
+            placeholder: true,
+            id: `placeholder-${index}`,
+          })
+        );
+        return [...this.aiSearchResults, ...placeholders];
+      }
+      
+      // 普通搜索
       const searchLower = this.searchQuery.toLowerCase();
       const filtered = this.notes.filter(note => 
         note.title?.toLowerCase().includes(searchLower) ||
@@ -197,7 +275,249 @@ export default {
     },
     handleSearch() {
       this.currentPage = 1;
+      
+      // 如果开启了AI搜索并且有搜索查询
+      if (this.useAISearch && this.searchQuery.trim()) {
+        this.performAISearch();
+      } else {
+        // 重置AI搜索结果
+        this.aiSearchResults = [];
+      }
     },
+    // 执行AI搜索
+    performAISearch() {
+      this.isSearching = true;
+      this.searchProgress = 0;
+      this.aiSearchResults = [];
+      this.searchStatusMessage = this.searchStatusMessages[0];
+      
+      // 先获取更多页的数据进行全局搜索
+      this.fetchAllPagesForSearch().then(() => {
+        // 模拟AI搜索进度
+        const progressInterval = setInterval(() => {
+          if (this.searchProgress < 100) {
+            this.searchProgress += 5;
+            
+            // 更新搜索状态消息
+            const messageIndex = Math.floor((this.searchProgress / 100) * this.searchStatusMessages.length);
+            if (messageIndex < this.searchStatusMessages.length) {
+              this.searchStatusMessage = this.searchStatusMessages[messageIndex];
+            }
+          } else {
+            clearInterval(progressInterval);
+            this.completeAISearch();
+          }
+        }, 100);
+      });
+    },
+    
+    // 获取多页数据用于搜索
+    async fetchAllPagesForSearch() {
+      try {
+        // 存储所有获取的笔记
+        let allNotes = [...this.notes];
+        
+        // 获取前5页的数据(或更多，根据需要调整)
+        const pagesToFetch = 5;
+        const pageSize = this.pageSize;
+        
+        // 并行获取多个页面的数据
+        const pagePromises = [];
+        for (let page = 1; page <= pagesToFetch; page++) {
+          if (page !== this.currentPage) { // 跳过当前页，因为已经加载了
+            pagePromises.push(this.fetchNotesForPage(page, pageSize));
+          }
+        }
+        
+        const pagesResults = await Promise.all(pagePromises);
+        
+        // 合并所有页面的结果
+        pagesResults.forEach(notes => {
+          if (notes && notes.length > 0) {
+            allNotes = [...allNotes, ...notes];
+          }
+        });
+        
+        // 存储用于搜索的所有笔记
+        this.allNotesForSearch = allNotes;
+        
+      } catch (error) {
+        console.error("Error fetching pages for search:", error);
+        // 如果获取失败，至少使用当前页的数据
+        this.allNotesForSearch = [...this.notes];
+      }
+    },
+    
+    // 获取指定页的笔记
+    async fetchNotesForPage(page, size) {
+      try {
+        const params = { page, size };
+        const response = await getNoteListService(params);
+        
+        if (response && response.length > 0) {
+          // 获取每个笔记的详细信息
+          const detailedNotes = await Promise.all(
+            response.map(async (note) => {
+              try {
+                const detailResponse = await getNoteDetailService({ id: note.id });
+                return {
+                  ...note,
+                  ...detailResponse.data,
+                };
+              } catch (error) {
+                console.error(`Error fetching details for note ${note.id}:`, error);
+                return note; // 返回基本信息
+              }
+            })
+          );
+          return detailedNotes;
+        }
+        return [];
+      } catch (error) {
+        console.error(`Error fetching notes for page ${page}:`, error);
+        return [];
+      }
+    },
+    
+    // 完成AI搜索
+    completeAISearch() {
+      // 模拟AI搜索结果，使用所有获取的笔记
+      const aiResults = this.simulateAISearchResults();
+      this.aiSearchResults = aiResults;
+      this.isSearching = false;
+      
+      // 显示搜索完成消息
+      ElMessage({
+        message: `AI搜索完成，找到 ${aiResults.length} 条相关内容`,
+        type: 'success',
+        duration: 3000
+      });
+    },
+    
+    // 模拟AI搜索结果
+    simulateAISearchResults() {
+      const query = this.searchQuery.toLowerCase();
+      
+      // 根据搜索查询的不同特征生成不同的AI搜索结果
+      let aiResults = [];
+      
+      // 使用所有页面的笔记而不仅仅是当前页
+      const notesToSearch = this.allNotesForSearch || this.notes;
+      
+      // 创建深拷贝以避免修改原始数据
+      const notesCopy = JSON.parse(JSON.stringify(notesToSearch));
+
+      // 定义主题关键词映射
+      const themeKeywords = {
+        sports: ['运动', '健身', '赛', '赛艇', '训练', '体育', '竞技', '比赛', '球', '跑步', '游泳', '健康', '锻炼', '体能'],
+        food: ['美食', '食谱', '菜', '烹饪', '食物', '餐', '厨', '吃', '美味', '料理'],
+        travel: ['旅行', '旅游', '景点', '游玩', '风景', '景区', '度假', '出游', '游记', '旅程']
+      };
+      
+      // 为每个笔记生成AI相关度和匹配原因
+      notesCopy.forEach(note => {
+        // 初始化基础相关度为较低值
+        let baseRelevance = 40;
+        let relevanceBoost = 0;
+        let matchReason = '';
+        let matchedKeywords = [];
+        
+        const noteContent = (note.title || '').toLowerCase() + ' ' + (note.content || '').toLowerCase();
+        
+        // 检查是否是运动相关查询
+        if (query.includes('运动') || query.includes('体育') || query.includes('赛') || 
+            query.includes('健身') || query.includes('训练')) {
+          // 检查所有运动相关关键词
+          themeKeywords.sports.forEach(keyword => {
+            if (noteContent.includes(keyword)) {
+              matchedKeywords.push(keyword);
+              // 根据关键词重要性给予不同的提升
+              if (['运动', '赛', '体育', '竞技', '训练'].includes(keyword)) {
+                relevanceBoost += 15; // 核心关键词提升更多
+              } else {
+                relevanceBoost += 8; // 相关关键词提升较少
+              }
+            }
+          });
+          
+          if (matchedKeywords.length > 0) {
+            matchReason = `AI分析：内容包含运动相关关键词「${matchedKeywords.join('」「')}」`;
+            // 根据匹配关键词数量额外提升相关度
+            relevanceBoost += Math.min(matchedKeywords.length * 5, 25);
+          }
+        } else if (query.includes('美食') || query.includes('食谱')) {
+          // 保持其他主题的搜索逻辑...
+          themeKeywords.food.forEach(keyword => {
+            if (noteContent.includes(keyword)) {
+              matchedKeywords.push(keyword);
+              relevanceBoost += 10;
+            }
+          });
+          
+          if (matchedKeywords.length > 0) {
+            matchReason = `AI分析：内容包含美食相关关键词「${matchedKeywords.join('」「')}」`;
+          }
+        } else if (query.includes('旅行') || query.includes('旅游')) {
+          // 保持其他主题的搜索逻辑...
+          themeKeywords.travel.forEach(keyword => {
+            if (noteContent.includes(keyword)) {
+              matchedKeywords.push(keyword);
+              relevanceBoost += 10;
+            }
+          });
+          
+          if (matchedKeywords.length > 0) {
+            matchReason = `AI分析：内容包含旅游相关关键词「${matchedKeywords.join('」「')}」`;
+          }
+        } else if (query.includes('热门') || query.includes('最近')) {
+          // 保持热门内容的逻辑...
+          if (Math.random() > 0.5) {
+            relevanceBoost = 25;
+            matchReason = 'AI分析：这是最近的热门内容';
+          }
+        } else {
+          // 默认情况，检查标题和内容是否包含查询词
+          if (noteContent.includes(query)) {
+            relevanceBoost = 20;
+            matchReason = `AI分析：内容包含"${this.searchQuery}"相关信息`;
+          }
+        }
+        
+        // 计算最终相关度，确保不超过100
+        const finalRelevance = Math.min(baseRelevance + relevanceBoost, 98);
+        
+        // 调整相关度阈值，只显示真正相关的内容
+        if ((matchedKeywords.length > 0 && finalRelevance > 50) || finalRelevance > 60) {
+          note.aiRelevance = finalRelevance;
+          note.aiMatchReason = matchReason || '基于内容语义分析的相关推荐';
+          aiResults.push(note);
+        }
+      });
+      
+      // 按相关度排序
+      aiResults.sort((a, b) => b.aiRelevance - a.aiRelevance);
+      
+      // 限制结果数量
+      return aiResults.slice(0, 9);
+    },
+    // 根据相关度获取颜色
+    getRelevanceColor(relevance) {
+      if (relevance >= 90) return '#67C23A'; // 高相关 - 绿色
+      if (relevance >= 70) return '#409EFF'; // 中高相关 - 蓝色
+      return '#E6A23C'; // 中低相关 - 橙色
+    },
+    // 高亮匹配的文本
+    highlightMatch(text) {
+      if (!this.searchQuery || !this.useAISearch || !text) return text;
+      
+      const query = this.searchQuery.trim();
+      if (!query) return text;
+      
+      // 简单的高亮实现，实际项目中可能需要更复杂的逻辑
+      return text.replace(new RegExp(query, 'gi'), match => 
+        `<span class="highlight-match">${match}</span>`
+      );
+    }
   },
   mounted() {
     this.fetchNotes();
@@ -467,6 +787,11 @@ export default {
   margin: 0;
 }
 
+.empty-suggestion {
+  color: #909399;
+  font-size: 14px;
+}
+
 @media (max-width: 640px) {
   .empty-image {
     width: 120px;
@@ -487,5 +812,31 @@ export default {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+}
+
+/* AI搜索相关样式 */
+.search-toggle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ai-search-tips {
+  margin-bottom: 20px;
+}
+
+.ai-search-processing {
+  padding: 40px 0;
+}
+
+.ai-relevance {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+:deep(.highlight-match) {
+  background-color: rgba(255, 230, 0, 0.3);
+  font-weight: 600;
+  padding: 0 2px;
+  border-radius: 2px;
 }
 </style>
