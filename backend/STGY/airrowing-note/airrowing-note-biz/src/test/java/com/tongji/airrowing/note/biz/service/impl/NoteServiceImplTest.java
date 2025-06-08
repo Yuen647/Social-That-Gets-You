@@ -311,7 +311,8 @@ class NoteServiceImplTest {
         
         // Mock方法行为 - 使用lenient()避免不必要的stubbing警告
         lenient().when(noteDOMapper.selectCreatorIdByNoteId(anyLong())).thenReturn(2L); // 笔记创建者ID
-        lenient().when(redisTemplate.execute(any(), anyList(), any())).thenReturn(1L); // 布隆过滤器存在
+        // Redis布隆过滤器返回1，表示用户点赞
+        lenient().when(redisTemplate.execute(any(), anyList(), any())).thenReturn(1L);
         lenient().when(noteLikeDOMapper.selectCountByUserIdAndNoteId(anyLong(), anyLong())).thenReturn(1); // 数据库中已点赞
         
         // 执行测试方法并验证异常
