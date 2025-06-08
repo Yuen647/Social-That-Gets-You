@@ -108,7 +108,8 @@ import { ref } from 'vue'
 import { MagicStick, ChatDotRound, Refresh, View, Star } from '@element-plus/icons-vue'
 
 // 数字人聊天页面的URL
-const chatUrl = 'https://www.baidu.com' // 示例使用百度链接
+//const chatUrl = 'https://www.baidu.com' // 示例使用百度链接
+const chatUrl = 'http://localhost:6006/' // 数字人链接 需要ssh登录服务器
 const chatIframe = ref(null)
 const zoomLevel = ref('1') // 默认100%缩放
 
